@@ -83,7 +83,7 @@ class LoanOptionsTest {
         val expect = listOf(
             Loan(LoanType.PERSONAL, 4.0),
             Loan(LoanType.CONSIGNMENT, 2.0),
-            Loan(LoanType.GUARANTEED, 2.0)
+            Loan(LoanType.GUARANTEED, 3.0)
         )
 
         val result = loanOptions.evaluateLoanOptions()
