@@ -26,7 +26,7 @@ class LoanOptions(
             loans.add(personal)
             loans.add(consignment)
             if (customer.age < 30) {
-                loans.add(guaranteed.copy(taxes = 2.0))
+                loans.add(guaranteed)
             }
         }
 
