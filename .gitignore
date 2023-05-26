@@ -1,22 +1,9 @@
-.gradle
-build/
-.idea
-!gradle/wrapper/gradle-wrapper.jar
-!**/src/main/**/build/
-!**/src/test/**/build/
-
 ### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-.idea/workspace.xml
-*.iws
-*.iml
-*.ipr
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+build
+.idea
 
 ### Eclipse ###
 .apt_generated
@@ -30,6 +17,7 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
@@ -41,4 +29,9 @@ bin/
 .vscode/
 
 ### Mac OS ###
-.DS_Store
+.DS_Store.idea/
+.gradle/
+.gradle
+.idea/gradle.xml
+.idea/sonarlint/issuestore/index.pb
+.idea/workspace.xml
