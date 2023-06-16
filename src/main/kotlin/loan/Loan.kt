@@ -7,6 +7,6 @@ data class Loan(
 enum class LoanType {
     PERSONAL,
     GUARANTEED,
-    CONSIGNMENT
+    PAYROLL
 }
 

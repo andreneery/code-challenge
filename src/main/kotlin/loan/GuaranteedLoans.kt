@@ -5,7 +5,9 @@ import customer.Customer
 class GuaranteedLoans() : GetLoansOption {
 
     override fun verifyLoan(customer: Customer): Boolean {
-        return (customer.age < 30 && customer.location == "SP") || (customer.income > 3000.0 || customer.income < 5000.0)
+        val minIncome = 3000.0
+        val maxIncome = 5000.0
+        return (customer.location == "SP") || (customer.income > minIncome || customer.income < maxIncome)
     }
     override fun evaluate(customer: Customer): Loan {
         val taxes = 3.0

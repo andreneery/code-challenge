@@ -67,7 +67,7 @@ class LoanOptionsTest {
         every { customer.age } returns 45
         val expect = listOf(
             Loan(LoanType.PERSONAL, 4.0),
-            Loan(LoanType.CONSIGNMENT, 2.0)
+            Loan(LoanType.PAYROLL, 2.0)
         )
 
         val result = loanOptions.evaluateLoanOptions()
@@ -82,7 +82,7 @@ class LoanOptionsTest {
         every { customer.age } returns 29
         val expect = listOf(
             Loan(LoanType.PERSONAL, 4.0),
-            Loan(LoanType.CONSIGNMENT, 2.0),
+            Loan(LoanType.PAYROLL, 2.0),
             Loan(LoanType.GUARANTEED, 3.0)
         )
 

@@ -2,15 +2,14 @@ package loan
 
 import customer.Customer
 
-
-class PersonalLoans: GetLoansOption {
+class PayrollLoans: GetLoansOption {
 
     override fun verifyLoan(customer: Customer): Boolean {
-        return true
+        return customer.income > 5000.0
     }
 
     override fun evaluate(customer: Customer): Loan {
-        val taxes = 4.0
-        return Loan(LoanType.PERSONAL, taxes)
+        val taxes = 2.0
+        return Loan(LoanType.PAYROLL, taxes)
     }
 }

@@ -6,7 +6,7 @@ class LoanOptions(
     private val customer: Customer
 ) {
     private val getLoans = listOf(
-        ConsignmentLoans(),
+        PayrollLoans(),
         GuaranteedLoans(),
         PersonalLoans()
     )
@@ -15,7 +15,7 @@ class LoanOptions(
         val loans = mutableListOf<Loan>()
 
         this.getLoans.forEach { loansModality: GetLoansOption ->
-            loans.addAll(loansModality.evaluate(customer))
+            loans.addAll(listOf(loansModality.evaluate(customer)))
         }
 
         return loans
