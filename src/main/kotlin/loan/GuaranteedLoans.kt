@@ -10,7 +10,6 @@ class GuaranteedLoans() : GetLoansOption {
         return (customer.location == "SP") || (customer.income > minIncome || customer.income < maxIncome)
     }
     override fun evaluate(customer: Customer): Loan {
-        val taxes = 3.0
-        return Loan(LoanType.GUARANTEED, taxes)
+        return Loan(LoanType.GUARANTEED)
     }
 }

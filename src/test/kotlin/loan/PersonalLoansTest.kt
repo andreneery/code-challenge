@@ -2,8 +2,6 @@ package loan
 
 import customer.Customer
 import io.mockk.*
-import io.mockk.impl.annotations.InjectMockKs
-import io.mockk.impl.annotations.MockK
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
@@ -20,7 +18,7 @@ class PersonalLoansTest() {
     @Test
     fun `evaluate should return a Loan with type PERSONAL and taxes 4`() {
         val customer = mockk<Customer>()
-        val expectedLoan = Loan(LoanType.PERSONAL, 4.0)
+        val expectedLoan = Loan(LoanType.PERSONAL)
 
         val subject = PersonalLoans()
         val result = subject.evaluate(customer)

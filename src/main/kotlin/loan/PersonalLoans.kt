@@ -10,7 +10,6 @@ class PersonalLoans: GetLoansOption {
     }
 
     override fun evaluate(customer: Customer): Loan {
-        val taxes = 4.0
-        return Loan(LoanType.PERSONAL, taxes)
+        return Loan(LoanType.PERSONAL)
     }
 }
