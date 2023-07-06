@@ -14,7 +14,7 @@ class LoanOptions(
     fun evaluateLoanOptions(): List<Loan> {
         val loans = mutableListOf<Loan>()
 
-        this.getLoans.forEach { loansModality: GetLoansOption ->
+        this.getLoans.forEach { loansModality: Loanable ->
             loans.addAll(listOf(loansModality.evaluate(customer)))
         }
 

@@ -2,7 +2,7 @@ package loan
 
 import customer.Customer
 
-class PayrollLoans: GetLoansOption {
+class PayrollLoans: Loanable {
 
     override fun verifyLoan(customer: Customer): Boolean {
         return customer.income > 5000.0

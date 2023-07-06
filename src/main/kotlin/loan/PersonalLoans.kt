@@ -3,7 +3,7 @@ package loan
 import customer.Customer
 
 
-class PersonalLoans: GetLoansOption {
+class PersonalLoans: Loanable {
 
     override fun verifyLoan(customer: Customer): Boolean {
         return true

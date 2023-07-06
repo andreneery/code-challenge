@@ -22,7 +22,7 @@ class GuaranteedLoansTest {
     @Test
     fun `verifyLoan it returns true when customer location is SP and income is more than 5000,00`() {
         val location = "SP"
-        val income = 9000.00
+        val income = 4000.00
         val customer = buildCustomer(location, income)
         val subject = GuaranteedLoans()
         val result = subject.verifyLoan(customer)

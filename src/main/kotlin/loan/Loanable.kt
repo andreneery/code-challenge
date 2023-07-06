@@ -2,7 +2,7 @@ package loan
 
 import customer.Customer
 
-interface GetLoansOption {
+interface Loanable {
 
     fun evaluate(customer: Customer): Loan
 
