@@ -2,22 +2,21 @@ package loan
 
 import customer.Customer
 
-class LoanOptions(
-    private val customer: Customer
-) {
-    private val getLoans = listOf(
+class LoanOptions(private val customer: Customer) {
+    private val loanStrategies = listOf(
         PayrollLoans(),
         GuaranteedLoans(),
         PersonalLoans()
     )
 
     fun evaluateLoanOptions(): List<Loan> {
-        val loans = mutableListOf<Loan>()
-
-        this.getLoans.forEach { loansModality: Loanable ->
-            loans.addAll(listOf(loansModality.evaluate(customer)))
+        var loans = mutableListOf<Loan>()
+        for (strategy in loanStrategies) {
+            if (strategy.verifyLoan(customer)) {
+                val loan = strategy.evaluate(customer)
+                loans.add(loan)
+            }
         }
-
         return loans
     }
 }
